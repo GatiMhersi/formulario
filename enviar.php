@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $cvFileName = $_FILES['cv']['name'];
 
   // Dirección de correo a la que se enviará el correo electrónico
-  $to = 'tucorreo@example.com';
+  $to = 'ghersinichmatias@outlook.com';
 
   // Asunto del correo electrónico
   $subject = 'Nuevo CV recibido';
