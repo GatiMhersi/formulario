@@ -1,50 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title></title>
   </head>
   <body>
-    <form id="cvForm">
-  <div>
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre" required>
-  </div>
-  <div>
-    <label for="apellido">Apellido:</label>
-    <input type="text" id="apellido" name="apellido" required>
-  </div>
-  <div>
-    <label for="localidad">Localidad:</label>
-    <input type="text" id="localidad" name="localidad" required>
-  </div>
-  <div>
-    <label for="cv">Currículum Vitae:</label>
-    <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
-  </div>
-  <button type="submit">Enviar</button>
-</form>
-<script>
-  document.getElementById('cvForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+    <form class="" action="https://formsubmit.co/ghersinichmatias@outlook.com" method="POST">
+      <label for="Nombre">Nombre</label>
+      <input type="text" name="Nombre" id="Nombre">
 
-    var formData = new FormData(this);
+      <input type="submit" value="Enviar">
 
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'enviar.php', true);
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState === 4 && xhr.status === 200) {
-        alert('¡Gracias! Tu CV ha sido enviado correctamente.');
-        document.getElementById('cvForm').reset();
-      } else {
-        alert('Error al enviar el CV. Por favor, intenta nuevamente.');
-      }
-    };
-    xhr.send(formData);
-  });
-</script>
-
-
+    </form>
 
   </body>
 </html>
